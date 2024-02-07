@@ -1,5 +1,6 @@
 ##Magical libraries!
 
+import os
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
@@ -7,10 +8,14 @@ import matplotlib.patches as patches
 
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
-folder_path_images=r'.\\Stuff\\Images2\\venus'
+folder_path_images=r'.\\Stuff\\Images\\venus'
 folder_path_plots_save=".\\Stuff\\Plots\\plot"
-minp=1 #which photo to star
-manp=12 # which photo to end
+
+minp= 1 #which photo to start with
+manp = len(os.listdir(folder_path_images[:-7])) #Systems guess of the Images
+
+#manp= 12  which photo to end
+
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 
