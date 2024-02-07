@@ -5,6 +5,15 @@ import numpy as np
 from matplotlib import pyplot as plt
 import matplotlib.patches as patches
 
+##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
+##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
+folder_path_images=r'.\\Stuff\\Images2\\venus'
+folder_path_plots_save=".\\Stuff\\Plots\\plot"
+minp=1 #which photo to star
+manp=12 # which photo to end
+##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
+##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
+
 ## Probably these are the only few lines in this code i can fully understand...
 
 def distance_squared(x,y,x_c,y_c):
@@ -85,22 +94,7 @@ phi=[]#Number of pixel above the threshold of luminosities in the photos
 s_phi=[] #related uncertainty
 ##
 
-manp=14 # which photo to end
-minp=1 #which photo to star
-
 ##Loading images from file
-
-
-##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
-##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
-##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
-##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
-folder_path_images=r'.\\Stuff\\Images\\venus'
-folder_path_plots=".\\Stuff\\Plots\\plot"
-##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
-##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
-##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
-##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 
 for i in range (minp, (manp+1),1):
     print("Photo:",i)
@@ -195,7 +189,7 @@ for i in range (minp, (manp+1),1):
     ax.add_patch(PALLA)
     ax.imshow(image_original)
     ax.errorbar(x_c,y_c,fmt='.')
-    plt.savefig(folder_path_plots + num + ".jpg")
+    plt.savefig(folder_path_plots_save + num + ".jpg")
     #plt.show()
 
     ## Get that radius!
@@ -242,7 +236,7 @@ plt.grid(True)
 plt.xlabel('$Fase \% $')
 plt.ylabel('$Superficie apparente di Venere[pixel^2]$')
 plt.legend()
-plt.savefig(folder_path_plots + "_Final.jpg")
+plt.savefig(folder_path_plots_save + "_Final.jpg")
 plt.show()
 
 
