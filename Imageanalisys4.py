@@ -95,8 +95,8 @@ minp=1 #which photo to star
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
-folder_path_images=r'.\\Code\\Images\\venus'
-folder_path_plots=".\\Code\\Plots\\plot"
+folder_path_images=r'.\\Stuff\\Images\\venus'
+folder_path_plots=".\\Stuff\\Plots\\plot"
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
