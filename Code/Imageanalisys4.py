@@ -95,9 +95,8 @@ minp=1 #which photo to star
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
-
-folder_path=r'C:\Users\zoom3\Documents\Unipi\Laboratorio I\VenusPhases\venus'
-
+folder_path_images=r'.\\Code\\Images\\venus'
+folder_path_plots=".\\Code\\Plots\\plot"
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
 ##!!!!!!!!!!!!CHANGE THE DIRECTORY!!!!!!!!!!!!!!!!!
@@ -107,7 +106,7 @@ for i in range (minp, (manp+1),1):
     print("Photo:",i)
     num=str(i)
 
-    image_path=folder_path+num+'.jpg'
+    image_path=folder_path_images+num+'.jpg'
     image = cv2.imread(image_path)
  ##Mother-fucking image reading function
 
@@ -196,7 +195,8 @@ for i in range (minp, (manp+1),1):
     ax.add_patch(PALLA)
     ax.imshow(image_original)
     ax.errorbar(x_c,y_c,fmt='.')
-    plt.show()
+    plt.savefig(folder_path_plots + num + ".jpg")
+    #plt.show()
 
     ## Get that radius!
     radii.append(r)
@@ -209,7 +209,7 @@ for i in range (minp, (manp+1),1):
     print("Photo:",i)
     num=str(i)
 
-    image_path=folder_path+num+'.jpg'
+    image_path=folder_path_images+num+'.jpg'
     image = cv2.imread(image_path)
 
     image_original=image
@@ -242,6 +242,7 @@ plt.grid(True)
 plt.xlabel('$Fase \% $')
 plt.ylabel('$Superficie apparente di Venere[pixel^2]$')
 plt.legend()
+plt.savefig(folder_path_plots + "_Final.jpg")
 plt.show()
 
 
